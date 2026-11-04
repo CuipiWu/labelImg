@@ -1,3 +1,30 @@
+.. image:: https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-blue.svg
+   :target: https://www.python.org/
+.. image:: https://img.shields.io/badge/PyQt5-Patched%20v5.15+-green.svg
+   :target: https://pypi.org/project/PyQt5/
+.. image:: https://img.shields.io/badge/Maintained%20by-CuipiWu-orange.svg
+   :target: https://github.com/CuipiWu/labelImg
+
+============================================================
+LabelImg (Python 3.10+ & 3.12 Compatibility Patch)
+============================================================
+
+📌 Maintainer Note / 维护者更新说明
+----------------------------------
+This fork is maintained by `CuipiWu <https://github.com/CuipiWu>`_.
+The official upstream repository has been unmaintained and crashes on modern Python (3.10+) with:
+
+* ``TypeError: arguments did not match any overloaded call: drawLine/drawRect`` (Canvas Segfault)
+* ``TypeError: setValue(self, a0: int): argument 1 has unexpected type 'float'`` (Scrollbar crash)
+
+**Key Patches:**
+* Fixed type casting from ``float`` to ``int`` in ``libs/canvas.py`` and ``labelImg/labelImg.py``.
+* Resolved Segmentation Fault / core dumped issues on Ubuntu 22.04 / 24.04 with Python 3.12.
+* Verified and fully functional on modern PyQt5 environments.
+
+------------------------------------------------------------
+(Below is the original documentation from the upstream project)
+------------------------------------------------------------
 .. image:: /readme/images/labelimg.png
         :target: https://github.com/heartexlabs/label-studio
 
