@@ -24,7 +24,8 @@ The official upstream repository has been unmaintained and crashes on modern Pyt
 
 ------------------------------------------------------------
 (Below is the original documentation from the upstream project)
-------------------------------------------------------------.. image:: /readme/images/labelimg.png
+------------------------------------------------------------
+.. image:: /readme/images/labelimg.png
         :target: https://github.com/heartexlabs/label-studio
 
 Label Studio is a modern, multi-modal data annotation tool
