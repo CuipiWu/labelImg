@@ -535,6 +535,7 @@ class Canvas(QWidget):
             p.setPen(self.drawing_rect_color)
             brush = QBrush(Qt.BDiagPattern)
             p.setBrush(brush)
+            # 把原报错可能为float类型强制转换为int类型
             p.drawRect(int(left_top.x()), int(left_top.y()), int(rect_width), int(rect_height))
 
         if self.drawing() and not self.prev_point.isNull() and not self.out_of_pixmap(self.prev_point):
