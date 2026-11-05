@@ -997,6 +997,7 @@ class MainWindow(QMainWindow, WindowMixin):
     def scroll_request(self, delta, orientation):
         units = - delta / (8 * 15)
         bar = self.scroll_bars[orientation]
+        # 把原疯狂刷屏报错可能为float类型强制转换为int类型
         bar.setValue(int(bar.value() + bar.singleStep() * units))
 
     def set_zoom(self, value):
